@@ -640,3 +640,113 @@ textarea.form-control {
         padding: 60px 0;
     }
 }
+
+/* Estilos mejorados con un fondo más distintivo */
+
+.contact-direct {
+    background: linear-gradient(135deg, #ffe8ec 0%, #fff6f8 100%); /* Fondo rosa suave */
+    padding: 32px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(255, 77, 109, 0.2);
+    border: none; /* Quitamos el borde y usamos fondo completo */
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-direct::before {
+    content: "";
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(255, 77, 109, 0.15) 0%, rgba(255, 77, 109, 0) 70%);
+    z-index: 0;
+}
+
+.contact-direct::after {
+    content: "";
+    position: absolute;
+    bottom: -50px;
+    left: -50px;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(255, 77, 109, 0.1) 0%, rgba(255, 77, 109, 0) 70%);
+    z-index: 0;
+}
+
+.contact-direct h3 {
+    color: #ff4d6d; /* Rosa más oscuro para el título */
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+.contact-direct p {
+    color: #555;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.contact-options {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 25px 0;
+    position: relative;
+    z-index: 1;
+}
+
+.contact-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 20px;
+    font-size: 1.1rem;
+    gap: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 30px; /* Botones más redondeados */
+}
+
+.contact-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.whatsapp-btn {
+    background-color: #25D366;
+    border-color: #25D366;
+}
+
+.whatsapp-btn:hover {
+    background-color: transparent;
+    color: #25D366;
+}
+
+.contact-message {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px dashed rgba(255, 77, 109, 0.3); /* Línea divisoria suave en tono rosa */
+    font-style: italic;
+    color: #666;
+    position: relative;
+    z-index: 1;
+}
+
+/* Icono decorativo en la esquina */
+.contact-direct .corner-icon {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 24px;
+    color: rgba(255, 77, 109, 0.2);
+    transform: rotate(15deg);
+}
+
+@media (max-width: 768px) {
+    .contact-options {
+        flex-direction: column;
+    }
+}
